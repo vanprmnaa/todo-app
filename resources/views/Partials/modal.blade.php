@@ -1,4 +1,3 @@
-{{-- Modal untuk menambahkan list baru --}}
 <div class="modal fade" id="addListModal" tabindex="-1" aria-labelledby="addListModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <form action="{{ route('lists.store') }}" method="POST" class="modal-content">
@@ -23,7 +22,6 @@
     </div>
 </div>
 
-{{-- Modal untuk menambahkan task baru --}}
 <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <form action="{{ route('tasks.store') }}" method="POST" class="modal-content">
@@ -41,15 +39,17 @@
                         placeholder="Masukkan nama list">
                 </div>
                 <div class="mb-3">
-                    <label for="name" class="form-label">deskripsi</label>
-                    <input type="text" class="form-control" id="description" name="description"
-                        placeholder="Masukkan deskripsi">
+                    <label for="description" class="form-label">Deskripsi</label>
+                    <textarea class="form-control" name="description" id="description" rows="3" placeholder="Masukkan deskripsi"></textarea>
                 </div>
-                <select class="form-select form-select-sm" aria-label="Small select example" id="priority" name="priority">
-                    <option value="low">low</option>
-                    <option value="medium" selected>medium</option>
-                    <option value="high">high</option>
-                  </select>
+                <div class="mb-3">
+                    <label for="priority" class="form-label">Priority</label>
+                    <select class="form-control" name="priority" id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -58,4 +58,3 @@
         </form>
     </div>
 </div>
-
