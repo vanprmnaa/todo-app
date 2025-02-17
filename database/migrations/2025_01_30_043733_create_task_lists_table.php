@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Membuat tabel task_lists
         Schema::create('task_lists', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-            $table->timestamps();
+            $table->id(); // Tambahkan kolom id
+            $table->string('name')->unique(); // Tambahkan kolom name
+            $table->timestamps(); // Tambahkan kolom created_at dan updated_at
         });
     }
 
@@ -23,7 +24,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        // Menghapus tabel task_lists
         Schema::dropIfExists('task_lists');
     }
 };
-
