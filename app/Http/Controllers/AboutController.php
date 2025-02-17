@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
+    // Membuat method index untuk menampilkan halaman about
     public function index()
     {
         $title = 'About Us'; // Definisikan variabel title
